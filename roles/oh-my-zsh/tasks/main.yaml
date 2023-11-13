@@ -25,32 +25,12 @@
     dest: "{{ ansible_user_dir }}/.zshrc"
     src: .zshrc.j2
 
-- name: Install syntax-highlighting plugin
+- name: Install zplug
   ansible.builtin.git:
     clone: yes
     depth: 1
-    dest: "{{ ansible_user_dir }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
-    repo: https://github.com/zsh-users/zsh-syntax-highlighting
-    single_branch: yes
-    update: yes
-    version: master
-
-- name: Install zsh-autosuggestions
-  ansible.builtin.git:
-    clone: yes
-    depth: 1
-    dest: "{{ ansible_user_dir }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions"
-    repo: https://github.com/zsh-users/zsh-autosuggestions
-    single_branch: yes
-    update: yes
-    version: master
-
-- name: Install zsh-completions
-  ansible.builtin.git:
-    clone: yes
-    depth: 1
-    dest: "{{ ansible_user_dir }}/.oh-my-zsh/custom/plugins/zsh-completions"
-    repo: https://github.com/zsh-users/zsh-completions
+    dest: "{{ ansible_user_dir }}/.oh-my-zsh/custom/plugins/zplug"
+    repo: https://github.com/zplug/zplug
     single_branch: yes
     update: yes
     version: master
