@@ -47,7 +47,7 @@ If you are on an older version I recommend upgrading. This can by done by the fo
 > Run the following command in your WSL terminal
 
 ```shell
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/Jamess-Lucass/dotfiles/main/bin/dotfiles)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/JRyGithub/dotfiles-and-scripts/main/bin/dotfiles)"
 ```
 
 Then close your terminal and re-open it. :)
