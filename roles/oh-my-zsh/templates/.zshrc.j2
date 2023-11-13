@@ -11,35 +11,11 @@ export PATH="$PNPM_HOME:$DOTFILES_PATH:$DOTNET_TOOLS_PATH:$DOTNET_ROOT:$PULUMI_P
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME=""
-source $ZSH/oh-my-zsh.sh
-export ZPLUG_HOME=/home/josh/.zplug
-source $ZPLUG_HOME/init.zsh
-zplug "mafredri/zsh-async", from:github
-zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
-zplug "zdharma/fast-syntax-highlighting", as:plugin, defer:2
-zplug "zsh-users/zsh-autosuggestions", as:plugin, defer:2
-zplug "plugins/git",   from:oh-my-zsh
-zplug bobsoppe/zsh-ssh-agent, use:ssh-agent.zsh, from:github
-# emojis
-zplug "stedolan/jq", \
-    from:gh-r, \
-    as:command, \
-    rename-to:jq
-zplug "b4b4r07/emoji-cli", \
-    on:"stedolan/jq"
-zplug load
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
-zplug load --verbose
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 [[ $TERM != "tmux-256color" ]] && exec tmux
+
+plugins=(git ssh-agent zsh-syntax-highlighting zsh-autosuggestions zsh-completions)
 
 source $ZSH/oh-my-zsh.sh
 
