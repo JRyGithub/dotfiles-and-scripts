@@ -11,7 +11,7 @@
     state: absent
 
 - name: Install pnpm
-  shell: /tmp/pnpm-install.sh env PNPM_VERSION=8.0.0 sh -
+  shell: /tmp/pnpm-install.sh env PNPM_VERSION=8.10.0 sh -
 
 - name: Remove pnpm Installation Script
   file:
