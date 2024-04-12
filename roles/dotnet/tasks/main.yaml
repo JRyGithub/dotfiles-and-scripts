@@ -5,9 +5,9 @@
     state: directory
   become: yes
 
-- name: Install dotnet 7
+- name: Install dotnet 8
   ansible.builtin.unarchive:
-    src: https://download.visualstudio.microsoft.com/download/pr/c646b288-5d5b-4c9c-a95b-e1fad1c0d95d/e13d71d48b629fe3a85f5676deb09e2d/dotnet-sdk-7.0.102-linux-x64.tar.gz
+    src: https://download.visualstudio.microsoft.com/download/pr/0a1b3cbd-b4af-4d0d-9ed7-0054f0e200b4/4bcc533c66379caaa91770236667aacb/dotnet-sdk-8.0.204-linux-x64.tar.gz
     dest: "/usr/share/dotnet"
     remote_src: yes
   become: yes
